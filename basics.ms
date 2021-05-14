@@ -97,3 +97,54 @@ mogą się okazać dla ciebie przydatne
 
 Paulo Cohello
 .QE
+
+.DS I
+\#.ID
+Tagi .DS oraz .DE pozwalają na łamanie tekstu
+tak jak jest pisany w skrypcie dokumentu, AB
+nie jak jest formatowny dokument.
+Pozwalana to np. na
+umieszczanie
+kodów źródłowych
+w tekscie
+.DE
+
+.DS L
+\#.LD
+Tag .DS posiada wiele opcji na
+formatowanie 
+kodów 
+źródłowych.
+W tym przypadku mamy wyrównanie 
+do lewej.
+.DE
+
+.DS R
+\#.RD
+Tag .DS posiada wiele opcji na
+formatowanie 
+kodów 
+źródłowych.
+W tym przypadku mamy wyrównanie 
+do prawej.
+.DE
+
+.KS
+Makra .KS i .KE pozwalają utrzymać blok tekstu na tej samej stronie.
+.KE
+
+.KF
+Za to znaczniki .KF i .KE sprawiają, że jeśli
+nasz blok tekstu nie zmieści się w tym konretnej stronie
+(zgodnie z kolejnością w pliku źródłowym)
+to zostanie on umieszczony na następnej stronie.
+Jest to przydatne w przypadku umieszcznia tabel czy 
+dużych obrazków razem z podpisem.
+.KE
+
+.B1
+Co jeśli chcielibyśmy mieć tekst w pudełku, ale takim
+dużym na wiele linii? Użyj makra .B1 i .B2. 
+Tekst teskt tekst tekst teskt tekst tekst teskt tekst
+tekst teskt tekst tekst teskt tekst tekst teskt tekst
+.B2
