@@ -17,6 +17,6 @@ math:
 	rm $(MATH).dvi
 
 tables:
-	groff -Kutf8 -mec -ms -Tdvi $(TABLES).ms > $(TABLES).dvi
+	groff -Kutf8 -t -e -mec -ms -Tdvi $(TABLES).ms > $(TABLES).dvi
 	dvipdfm -cz 9 $(TABLES).dvi
 	rm $(TABLES).dvi
