@@ -1,15 +1,16 @@
-\#Komentarz
-\#Tak dolaczamy plik z makrami
+\# Tak się pisze komentarz bez wpływu na dokument
+\" a taki komentarz powoduje powstanie odstępu w dokumencie
 .so makra
 .TL
-Tytuł
+Groff - podstawy
 .AU
 Adrian Szczepański
 .AI
-Moja organizacja/firma
+Brak organizacji/instytucji
 .AB
-Jeżeli piszemy artykuł naukowy możemy rówież zawrzeć abstrakt do naszej pracy.
-Służą do tego odpowiednie znaczniki.
+Nienijszy dokument opisuje podstawowe zagadnienia
+związane z formatowaniem dokumentów narzędziem
+.BI "Groff"
 .AE
 .NH
 Rozdział pierwszy
@@ -53,43 +54,11 @@ Pierwszy punkt
 Drugi punkt
 .BL
 No i trzeci
-.NH
-Równania matematyczne
 .PP
-Równania matematyczne mogą być następujące:
-.EQ
-x = 3 + 5
-x >= 3 +- 5
-.EN
-.EQ
-x != 3
-.EN
-.EQ
-b sup 2 - 4ac
-.EN
-.EQ
-b sup {2a}
-.EN
-.EQ
-phi = {1 + sqrt 5} over 2
-.EN
-.EQ
-s = sqrt {
-{ sum from i=1 to {N + 2} (x sub 1 - x bar ) sup 2 }
-over {N - 1}
-}
-.EN
-.EQ
-pi = int from -1 to 1 dx over sqrt {1-x sup 2}
-.EN
-.EQ
-delim $$
-.EN
-.PP
-Możemy też umieszczać nasze równania w tekście np. $x = 5 sup 10$.
-Aby to zrobić należy w znacznikach .EQ i .EN umieścić definicję słowa "delim".
-.EQ
-delim off
-.EN
-Jeżeli chcemy używać potem naszego znaku ogranicznika (np. znaku $)
-należy umieścić definicję "delim off".
+Jeżeli chcemy możemy używać także numeracji bądź własnych punktorów np:
+.IP "Słowo"
+Definicja słowa
+.IP "Inne słowo"
+Defifnicja innego słowa. Definicja ta może być bardzo długa. 
+Tak długa, że zajmie więcej niż jedną linię.
+Wtedy też takie wcięcie między słowem, a definicją ułatwia czytanie.

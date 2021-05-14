@@ -1,8 +1,16 @@
-TARGET = dok1
+BASICS = basics
+MATH = math
 
-.PHONY: all
+.PHONY: all basics math
 
-all:
-	groff -Kutf8 -e -mec -ms -Tdvi $(TARGET).ms > $(TARGET).dvi
-	dvipdfm -cz 9 $(TARGET).dvi
-	rm $(TARGET).dvi
+all: basics math
+
+basics:
+	groff -Kutf8 -mec -ms -Tdvi $(BASICS).ms > $(BASICS).dvi
+	dvipdfm -cz 9 $(BASICS).dvi
+	rm $(BASICS).dvi
+
+math:
+	groff -Kutf8 -e -mec -ms -Tdvi $(MATH).ms > $(MATH).dvi
+	dvipdfm -cz 9 $(MATH).dvi
+	rm $(MATH).dvi
