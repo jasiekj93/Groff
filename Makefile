@@ -1,8 +1,8 @@
 #target names
-BASICS = basics
-MATH = math
-TABLES = tables
-PICTURES = pictures
+BASICS = 01_basics
+MATH = 02_math
+TABLES = 03_tables
+PICTURES = 04_pictures
 
 DOCS_DIR = docs
 IMG_DIR = images
