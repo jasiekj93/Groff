@@ -25,7 +25,11 @@ wyrównuje obrzek do prawej;
 obrazek jest "wcięty" względem tekstu o parametr
 .I "n" .
 Oprócz tego po nazwie pliku możemy podać preferowaną szerokość i wysokość nazego obrazka.
-Pełńa składnia makra wygląda następująco:
+Domyślną miarą są cale. Aby podać wartość w pikselach należy na końcu umieścić postfiks 
+.I "p"
+np.
+.I "100p" .
+Pełna składnia makra wygląda następująco:
 .DS I
  .PSPIC [-L|-R|-C|-I n] file [width [height]]
 .DE
