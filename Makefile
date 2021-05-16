@@ -3,14 +3,16 @@ BASICS = 01_basics
 MATH = 02_math
 TABLES = 03_tables
 PICTURES = 04_pictures
+DIAGRAMS = 05_diagrams
+LAYOUT = 06_layout
 
 DOCS_DIR = docs
 IMG_DIR = images
 
 #target list
-.PHONY: all basics math tables pictures convertImages
+.PHONY: all basics math tables pictures convertImages diagrams layout
 
-all: basics math tables pictures
+all: basics math tables pictures diagrams layout
 
 basics: | $(DOCS_DIR)
 	groff -Kutf8 -mec -ms -Tdvi $(BASICS).ms > $(BASICS).dvi
@@ -44,6 +46,18 @@ convertImages: | $(IMG_DIR)
 	for picture in $(IMAGE_LIST); do \
 		convert $(IMG_DIR)/$$picture.jpeg $(IMG_DIR)/$$picture.ps; \
 	done
+
+diagrams: | $(DOCS_DIR)
+	groff -Kutf8 -p -e -mec -ms -Tdvi $(DIAGRAMS).ms > $(DIAGRAMS).dvi
+	dvipdfm -cz 9 $(DIAGRAMS).dvi
+	mv $(DIAGRAMS).pdf $(DOCS_DIR)
+	rm $(DIAGRAMS).dvi
+
+layout: | $(DOCS_DIR)
+	groff -Kutf8 -mec -ms -Tdvi $(LAYOUT).ms > $(LAYOUT).dvi
+	dvipdfm -cz 9 $(LAYOUT).dvi
+	mv $(LAYOUT).pdf $(DOCS_DIR)
+	rm $(LAYOUT).dvi
 
 # make directories
 $(DOCS_DIR) :
