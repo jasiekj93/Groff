@@ -50,22 +50,21 @@ tekst lub nawet umieścić go
 Inne modyfikacje to 
 .R "typ regularny"
 .CW "o stałej szerokości"
-.LG 
+.LG
 powiększony tekst
-.LG 
+.LG
 bardziej powiększony tekst
-.LG 
+.LG
 jeszcze bardziej powiększony tekst
-.NL 
+.NL
 i normalny tekst
-.SM 
+.SM
 pomniejszony tekst
-.NL 
+.NL
 znowu normalny tekst
 \*{
 To jest przypis górny
 \*}
-
 .RS
 .PP
 Nasz paragraf może być także wcięty bardziej względem oryginalnego formatowania.
