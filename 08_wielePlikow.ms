@@ -17,7 +17,7 @@ z wielu plików źródłowych.
 .SH
 WSTĘÞ
 .PP
-Jeżeli piszemy książkę lub artykuł na wiele stron z pewnością łatwiej będzie podzielić go na mniejsze części.
+Jeżeli piszemy książkę lub artykuł na wiele stron, z pewnością łatwiej będzie podzielić go na mniejsze części.
 W ten sposób możemy niezależnie redagować każdy z kawałków osobno.
 Łatwiej też umieszczać te fragmenty w innych publikacjach.
 .PP
