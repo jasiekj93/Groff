@@ -12,6 +12,11 @@ Nienijszy dokument opisuje podstawowe zagadnienia
 związane z formatowaniem dokumentów narzędziem
 .BI "Groff"
 .AE
+.SH
+Wstęþ
+.PP
+Pomiędzy rozdziałami numerowanymi (ale nie pomiędzy podrozdziałami) 
+można umieszczać rozdzały bez numerów, tak jak ten.
 .NH
 Rozdział pierwszy
 .PP
@@ -29,7 +34,6 @@ Istnieje też paragraf bewz wcięcia.
 .XP
 Lub też taki, gdzie wcięte są wszystkie linie, oprócz pierwszej.
 Wtedy też wyglada to mniej więcej tak jak tutaj.
-
 .NH
 Rozdział drugi
 .NH 2

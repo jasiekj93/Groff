@@ -6,14 +6,15 @@ PICTURES = 04_obrazki
 DIAGRAMS = 05_diagramy
 LAYOUT = 06_uklad
 REFER = 07_bibliografia
+MULTIFILES = 08_wielePlikow
 
 DOCS_DIR = docs
 IMG_DIR = images
 
 #target list
-.PHONY: all basics math tables pictures convertImages diagrams layout refer
+.PHONY: all basics math tables pictures convertImages diagrams layout refer multifiles
 
-all: basics math tables pictures diagrams layout refer
+all: basics math tables pictures diagrams layout refer multifiles
 
 basics: $(BASICS).pdf
 math: $(MATH).pdf
@@ -22,6 +23,7 @@ pictures: $(PICTURES).pdf
 diagrams: $(DIAGRAMS).pdf
 layout: $(LAYOUT).pdf
 refer: $(REFER).pdf
+multifiles: $(MULTIFILES).pdf
 
 $(BASICS).pdf: $(BASICS).ms | $(DOCS_DIR)
 	groff -Kutf8 -mec -ms -Tdvi $(BASICS).ms > $(BASICS).dvi
@@ -69,10 +71,16 @@ $(LAYOUT).pdf: $(LAYOUT).ms | $(DOCS_DIR)
 	rm $(LAYOUT).dvi
 
 $(REFER).pdf: $(REFER).ms | $(DOCS_DIR)
-	groff -Kutf8 -mec -ms -Tdvi -R $(REFER).ms > $(REFER).dvi
+	groff -Kutf8 -R -mec -ms -Tdvi $(REFER).ms > $(REFER).dvi
 	dvipdfm -cz 9 $(REFER).dvi
 	mv $(REFER).pdf $(DOCS_DIR)
 	rm $(REFER).dvi
+
+$(MULTIFILES).pdf: $(MULTIFILES).ms | $(DOCS_DIR)
+	soelim $(MULTIFILES).ms | groff -Kutf8 -mec -ms -Tdvi > $(MULTIFILES).dvi
+	dvipdfm -cz 9 $(MULTIFILES).dvi
+	mv $(MULTIFILES).pdf $(DOCS_DIR)
+	rm $(MULTIFILES).dvi
 
 # make directories
 $(DOCS_DIR) :
