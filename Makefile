@@ -69,7 +69,7 @@ $(LAYOUT).pdf: $(LAYOUT).ms | $(DOCS_DIR)
 	rm $(LAYOUT).dvi
 
 $(REFER).pdf: $(REFER).ms | $(DOCS_DIR)
-	groff -Kutf8 -mec -ms -Tdvi $(REFER).ms > $(REFER).dvi
+	groff -Kutf8 -mec -ms -Tdvi -R $(REFER).ms > $(REFER).dvi
 	dvipdfm -cz 9 $(REFER).dvi
 	mv $(REFER).pdf $(DOCS_DIR)
 	rm $(REFER).dvi
