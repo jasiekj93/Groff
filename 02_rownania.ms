@@ -12,6 +12,10 @@ równań matematycznych narzędziem
 .NH
 Równania matematyczne
 .PP
+Do formatowania równań matematycznych służy preprocesor
+.I "eqn" "."
+Aby z niego skorzystać należy dodać flagę
+.B "-e" "."
 Równania matematyczne mogą być następujące:
 .EQ
 x = 3 + 5
