@@ -31,14 +31,13 @@ W przypadku wielu plików są one dodawane sekwencyjnie, w kolejności ich wywo�
  .so plik2.ms
  .so plik3.ms
 .DE
-.SH
 KOLEJNOŚĆ WYKONYWANIA
 .PP
-Ze względu na to, że preprocesor
-.I "preconv"
-zawsze wywoływany jest jako pierwszy (opcją
-.B "-Kutf8" ")"
-, nasze dodatkowe pliki źródłowe nie zostają poddane odpowiedniemu kodowaniu.
+Ze względu na to, że preprocesor 
+.I "preconv" ","
+konwertujący kodowanie plików żroðlowych, jest zawsze wywoływany jako pierwszy (opcją
+.B "-Kutf8" ")."
+Z tego powodu nasze dodatkowe pliki źródłowe nie zostają poddane odpowiedniemu kodowaniu.
 Aby to naprawić należy najpierw załączyć nasze pliki źródłowe preprocesorem
 .I "soelim" ","
 a następnie wywołać resztę groffa. 

@@ -19,6 +19,26 @@ Nienijszy dokument opisuje zagadnienia
 związane z umieszczaniem bibliografii w dokumentach
 .BI "Groff"
 .AE
+.SH
+KOLEJNOŚĆ WYKONYWANIA
+.PP
+W czasie kompilacji dokumentu preprocesor 
+.I "preconv" ","
+konwertujący kodowanie plików żrodłowych, jest zawsze wywoływany jako pierwszy (opcją
+.B "-Kutf8" ")."
+Z tego powodu nasze odwołania bibliograficzne nie zostają poddane odpowiedniemu kodowaniu.
+Z drugiej strony preprocesor bibliograficzny 
+.I "refer"
+nie rozpoznaje polskich znaków, przez co uszkadza oryginalny dokument.
+Rozwiązaniem jest najpierw wywołać
+.I "preconv" ","
+na naszym dokumencie, następnie 
+.I "refer"
+i na końcu groffa znowu z konwersją kodowania (opcja 
+.B "-Kutf8" ")." 
+
+Szczegóły znajdują się w pliku 
+.I "Makefile" "."
 .NH
 Plik z bibliografią
 .PP
@@ -111,7 +131,7 @@ konopnicka65
 .]
 A tu jeszcze inny.
 .[
-szlachetny
+Jele
 .]
 Tutaj sam magazyn.
 .[
@@ -119,39 +139,6 @@ Chip 2003
 .]
 .NH
 Wyświetlanie bibliografii
-.NH 2
-Polskie znaki
-.PP
-Aby
-.I "refer"
-prawidłowo intepretował polskie znaki, należy zapisać je jako znaki specjalne z wyukorzystaniem tzw.
-.B "Akcentów"
-(ang. 
-.I "Accents"
-) opisanych w dokumentacji 
-.I "groff_char(7)" "."
-Poniżej znajduje się lista wszystkich polskich
-.UL "małych liter" "."
-Duże litery tworzy się poprzez zmianę rozmiaru w znaku specjalnym 
-(np. zamiana [o aa] na [O aa] daje w rezultacie \[O aa]).
-.IP "\\\[o aa]"
-\[o aa];
-.IP "\\\[c aa]"
-\[c aa];
-.IP "\\\[s aa]"
-\[s aa];
-.IP "\\\[n aa]"
-\[n aa];
-.IP "\\\[z aa]"
-\[z aa];
-.IP "\\\[a ho]"
-\[a ho];
-.IP "\\\[e ho]"
-\[e ho];
-.IP "\\\[/l]"
-\[/l];
-.IP "\\\[z a.]"
-\[z a.];
 .PP
 Nie zapomnij o zmianie zmiennej wyświeltającej nazwę bibliografii na język polski:
 .DS I

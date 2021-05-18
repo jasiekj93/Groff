@@ -84,7 +84,7 @@ Oto kilka przykładów tabel:
 box, center,tab(;);
 c c c
 l l l.
-Language;Authors;Runs;on
+Język;Authors;Runs;on
 
 Fortran;Many;Almost anything
 PL/1;IBM;360/370
