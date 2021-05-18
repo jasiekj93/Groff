@@ -5,7 +5,7 @@
 .nr FM 3c
 .nr PS 13
 .nr VS 20
-.fam AR
+.ft AR
 .ds CH
 .ds RF -\En[PN]-
 .ds ABSTRACT ABSTRAKT

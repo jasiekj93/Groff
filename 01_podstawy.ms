@@ -17,6 +17,7 @@ Wstęþ
 .PP
 Pomiędzy rozdziałami numerowanymi (ale nie pomiędzy podrozdziałami) 
 można umieszczać rozdzały bez numerów, tak jak ten.
+.bp
 .NH
 Rozdział pierwszy
 .PP
@@ -36,6 +37,21 @@ Lub też taki, gdzie wcięte są wszystkie linie, oprócz pierwszej.
 Wtedy też wyglada to mniej więcej tak jak tutaj.
 .NH
 Rozdział drugi
+.PP
+.ad l
+To jest tket wyrównany do lewej.
+
+.ad r
+To jest tekst wyrównany do prawej.
+
+.ad c
+To jest tekst wyśrodkowany.
+
+.ad n
+A to jest tekst wyjustowany do obydwu marginesów (domyślnie).
+
+Możemy też wymusić łamanie tekstu do nowej linii \p
+w dowolnym momencie.
 .NH 2
 Podrozdział rozdziału drugiego
 .PP
