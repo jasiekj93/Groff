@@ -3,6 +3,8 @@
 .so makra
 .TL
 Groff - podstawy
+
+\l'5i'
 .AU
 Adrian Szczepański
 .AI
